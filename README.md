@@ -1,2 +1,2 @@
-# Laravel-mail
+# laravel-mail
 send mail in laravel 9
