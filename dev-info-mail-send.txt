@@ -1,0 +1,32 @@
+1. enable imap from google account setting
+
+2. update mail details in - .env file
+
+*create a blade and controller file
+3. make a contact form in - contact blade file
+
+* make a route for the blade
+* then return view in method in - contactControler
+4. set post route in web.php and set route() in form action - in blade
+
+5. then code in post route method in - contactControler
+
+* Cmd: php artisan make:mail sendMail
+6. code for send mail in - contactControler
+* use App\Mail\sendMail;
+* use Illuminate\Support\facades\Mail;
+
+7. assign the variables as public and in _construct() in - sendMail.php
+* set mail subject in envelope() - sendMail.php
+* set mail html template markdown: in content() - sendMail.php
+* use with in - content()
+
+8. then set mail content variable in - mail-template blade
+* Cmd: php artisan optimize
+
+9. show flash message after sent
+* return redirect('/mail')->with('status', 'Email Sent Successfully'); - in controller
+
+*   @if (session('status'))
+     {{ session('status') }}
+    @endif
